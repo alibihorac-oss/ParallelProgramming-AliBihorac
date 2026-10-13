@@ -1,7 +1,7 @@
 "Assignment 1 - Debugging with Valgrind"
 
 "Valgrind before fixing the code"
-
+```
 ==161030== Memcheck, a memory error detector
 ==161030== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==161030== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
@@ -41,8 +41,9 @@
 ==161030== Use --track-origins=yes to see where uninitialised values come from
 ==161030== For lists of detected and suppressed errors, rerun with: -s
 ==161030== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 0 from 0)
+```
 "Valgrind after fixing the code"
-
+```
 ==161090== Memcheck, a memory error detector
 ==161090== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==161090== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
@@ -57,4 +58,5 @@
 ==161090== 
 ==161090== For lists of detected and suppressed errors, rerun with: -s
 ==161090== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
 "There were three bugs the first bug is: that the ipos and ival were not equal to 0. The second one was that the code wrote: for (int i = 0; i<=10; i++) for (int i = 0; i<=10; i++) and it should say for (int i = 0; i<10; i++) for (int i = 0; i<10; i++) And the third one was that there was no free(iarray)"
